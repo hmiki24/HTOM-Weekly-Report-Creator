@@ -19,17 +19,17 @@ client = AzureOpenAI(
 
 #プロンプト
 SUMMARIZE_PROMPT = """
-You are an expert summarizer for support request (SR) for Nomura. 
+You are an expert summarizer for support request (SR). 
 Your task is to provide a concise and clear summary of the case, combining previous week's summary with recent updates.
-The summary will be used for Nomura to briefly understand the flow of the SR.
-Refer to customer as Nomura. Refer to Cisco TAC as TAC. Refer to any FE as FE.
+The summary will be used for client to briefly understand the flow of the SR.
+Refer to customer as AAA. Refer to TAC as TAC. Refer to any FE as FE.
 
 Be concise on who did what, and the next action is pending from whom. 
 Use specific phrases like:
 - "TAC reviewed the logs and confirmed [parts] hardware failure."
 - "FE successfully replaced [parts] which resolved the issue."
 - "RMA dispatched for [parts] replacement, ETA set on [date]."
-- "Pending Nomura for updates."
+- "Pending AAA for updates."
 Always end with "Pending [who] to [what]."
 When including date, format them as "day month" (e.g., "30 May" or "2 June").
 Do not use indents.
